@@ -1,5 +1,7 @@
 <?php
 $word = $_POST['paragraph'];
+$length_word = strlen($word);
+$filtered_word = str_replace($word, 'ipsum', '***') // TO FIX
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +13,18 @@ $word = $_POST['paragraph'];
   <title>PHP Badwords</title>
 </head>
 <body>
-  <?= $word ?>
+  <h1>PHP Badword</h1>
+  <h3>Hai inserito questa frase:</h3>
+  <p>
+    <?= $word ?>
+  </p>
+
+  <h3>Il risultato è:</h3>
+  <p>
+    <?= $filtered_word ?> <!-- TO FIX -->
+  </p>
+  <p>
+    La frase è lunga <?= $length_word ?> caratteri
+  </p>
 </body>
 </html>
