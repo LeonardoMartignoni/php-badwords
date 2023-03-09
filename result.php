@@ -1,7 +1,7 @@
 <?php
 $word = $_POST['paragraph'];
 $length_word = strlen($word);
-$filtered_word = str_replace($word, 'ipsum', '***') // TO FIX
+$filtered_word = str_replace('ipsum', '***', $word) // TO FIX
 ?>
 
 <!DOCTYPE html>
