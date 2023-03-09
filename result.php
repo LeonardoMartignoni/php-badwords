@@ -1,7 +1,8 @@
 <?php
 $word = $_POST['paragraph'];
 $length_word = strlen($word);
-$filtered_word = str_replace('ipsum', '***', $word) // TO FIX
+$lowercase_word = strtolower($word);
+$filtered_word = str_replace('ipsum', '***', $lowercase_word);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ $filtered_word = str_replace('ipsum', '***', $word) // TO FIX
 
   <h3>Il risultato è:</h3>
   <p>
-    <?= $filtered_word ?> <!-- TO FIX -->
+    <?= $filtered_word ?>
   </p>
   <p>
     La frase è lunga <?= $length_word ?> caratteri
