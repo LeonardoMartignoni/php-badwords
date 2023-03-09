@@ -1,8 +1,7 @@
 <?php
 $word = $_POST['paragraph'];
 $length_word = strlen($word);
-$lowercase_word = strtolower($word);
-$filtered_word = str_replace('ipsum', '***', $lowercase_word);
+$filtered_word = str_replace('ipsum', '***', $word);
 ?>
 
 <!DOCTYPE html>
